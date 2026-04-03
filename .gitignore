@@ -1,0 +1,46 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+gak
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Dependency directories (remove the comment below to include it)
+# vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Go workspace directory
+.work/
+
+# tmp/ and debug directories
+tmp/
+debug/
+
+# IDE and OS specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# GAK specific generated files and directories
+# Ignore session checkpoints
+.gak/sessions/
+# Ignore downloaded MCP node dependencies and built test services
+.gak/mcp-servers/node_modules/
+.gak/mcp-servers/package-lock.json
+# Ignore any temp configuration tests
+gak_test_*
+
+# Ignore local config file containing sensitive API keys
+.gak/config.json

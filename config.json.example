@@ -1,0 +1,76 @@
+{
+  "llm": {
+    "provider": "openai",
+    "base_url": "https://api.openai.com/v1",
+    "api_key": "${OPENAI_API_KEY}",
+    "model": "gpt-4o",
+
+    "providers": {
+      "ctyun": {
+        "type": "openai",
+        "base_url": "https://wishub-x6.ctyun.cn/v1",
+        "api_key": "YOUR_CTYUN_API_KEY_HERE",
+        "model": "6d3a57c3a6fb465e968b604783b89eda",
+        "display_name": "CTYun",
+        "models": {
+          "glm5": { "id": "6d3a57c3a6fb465e968b604783b89eda" }
+        }
+      },
+      "windhub": {
+        "type": "openai",
+        "base_url": "https://windhub.cc/v1",
+        "api_key": "YOUR_WINDHUB_API_KEY_HERE",
+        "model": "gpt-5.4",
+        "display_name": "WindHub",
+        "models": {
+          "gpt-5.4": {},
+          "gpt-5.4-mini": {}
+        }
+      },
+      "api-test": {
+        "type": "openai",
+        "base_url": "https://openai.api-test.us.ci/v1",
+        "api_key": "YOUR_API_TEST_API_KEY_HERE",
+        "model": "gpt-5.4-mini",
+        "display_name": "API-Test",
+        "models": {
+          "gpt-5": {},
+          "gpt-5-codex": {},
+          "gpt-5.4": {},
+          "gpt-5.4-mini": {}
+        }
+      }
+    }
+  },
+  "mcp": {
+    "servers": [
+      {
+        "name": "everything",
+        "transport": "stdio",
+        "command": "node",
+        "args": [".gak/mcp-servers/node_modules/@modelcontextprotocol/server-everything/dist/index.js"],
+        "enabled": true
+      },
+      {
+        "name": "amap-maps-streamableHTTP",
+        "transport": "streamable-http",
+        "url": "https://mcp.amap.com/mcp?key=YOUR_AMAP_MCP_KEY_HERE",
+        "enabled": true
+      }
+    ]
+  },
+  "skills": {
+    "dirs": [".gak/skills", "~/.gak/skills"]
+  },
+  "plugins": {
+    "configs": {}
+  },
+  "security": {
+    "auto_approve_risk": "low"
+  },
+  "agent": {
+    "max_turns": 25,
+    "max_tokens": 16384,
+    "temperature": 0.7
+  }
+}
