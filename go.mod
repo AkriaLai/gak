@@ -1,6 +1,6 @@
 module github.com/akria/gak
 
-go 1.23.3
+go 1.26.1
 
 require (
 	github.com/c-bata/go-prompt v0.2.6
