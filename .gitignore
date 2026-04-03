@@ -33,14 +33,7 @@ debug/
 *.swo
 .DS_Store
 
-# GAK specific generated files and directories
-# Ignore session checkpoints
-.gak/sessions/
-# Ignore downloaded MCP node dependencies and built test services
-.gak/mcp-servers/node_modules/
-.gak/mcp-servers/package-lock.json
-# Ignore any temp configuration tests
-gak_test_*
+# Ignore the entire local .gak workspace directory
+# (Logs, sessions, local configs, downloaded MCP dependencies, etc.)
+.gak/
 
-# Ignore local config file containing sensitive API keys
-.gak/config.json
